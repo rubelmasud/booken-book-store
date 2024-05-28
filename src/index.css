@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  font-size: 18px;
+  opacity: 60%;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: #f44344;
+}
+
+/* Add this to your CSS file or a <style> block */
+.mega-menu {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  visibility: collapse;
+}
+
+.mega-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  visibility: visible;
+}
