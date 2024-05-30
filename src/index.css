@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-.nav-link {
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  padding: 10px 40px;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-links li a {
   font-size: 18px;
-  opacity: 60%;
-  transition: all 0.3s ease;
+  color: rgb(46, 44, 44);
+  transition: all 0.3s ease-in-out;
 }
-.nav-link:hover {
-  color: #f44344;
-}
-
-/* Add this to your CSS file or a <style> block */
-.mega-menu {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  visibility: collapse;
+.nav-links li a:hover {
+  color: #f54446;
 }
 
-.mega-menu.show {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  visibility: visible;
+.footer-title {
+  color: #000;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-links li {
+  list-style: circle;
+}
+.footer-links li a {
+  color: rgb(46, 44, 44);
+  transition: all 0.3s ease-out;
+}
+.footer-links li a:hover {
+  color: #f54446;
 }
